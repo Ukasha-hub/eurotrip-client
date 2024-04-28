@@ -6,12 +6,25 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+import SignIn from './SignIn.jsx';
+import AuthProvider from './AuthProvider.jsx';
+import Register from './Register.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
     children:[
+      {
+        path: '/signIn',
+        element: <SignIn></SignIn>
+        
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
+        
+      },
       
     ]
   },
@@ -19,6 +32,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+    <AuthProvider><RouterProvider router={router} /></AuthProvider>
+   
   </React.StrictMode>,
 )
