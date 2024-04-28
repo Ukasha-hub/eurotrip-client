@@ -9,6 +9,7 @@ import './index.css'
 import SignIn from './SignIn.jsx';
 import AuthProvider from './AuthProvider.jsx';
 import Register from './Register.jsx';
+import AddTouristSpot from './AddTouristSpot.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
         element: <Register></Register>
         
       },
+      {
+        path: '/addSpot',
+        element: <AddTouristSpot></AddTouristSpot>
+      }
       
     ]
   },
