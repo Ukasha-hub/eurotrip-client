@@ -24,7 +24,7 @@ const Navbar = () => {
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-20 p-2 shadow bg-base-100 rounded-box w-52 ">
                 <li ><NavLink to='/'>Home</NavLink></li>
                 <li ><NavLink to='/addSpot'>Add Tourist Spot</NavLink></li>
-                <li ><NavLink to=''>User Profile</NavLink></li>
+                <li ><NavLink to='/allSpot'>User Profile</NavLink></li>
                 <li>
                 {
                     user?
@@ -87,7 +87,8 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 ">
                 <li ><NavLink to='/'>Home</NavLink></li>
                 <li ><NavLink to='/addSpot'>Add Tourist Spot</NavLink></li>
-                <li ><NavLink to=''>User Profile</NavLink></li>
+                <li ><NavLink to='/allSpot'>All Tourist Spot</NavLink></li>
+                <li ><NavLink to='/userSpot'>My Tourist Spot</NavLink></li>
                 <li>
                 {
                     user?

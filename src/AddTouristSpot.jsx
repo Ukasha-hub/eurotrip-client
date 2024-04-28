@@ -1,6 +1,8 @@
-
+import { useContext } from "react";
+import { AuthContext } from "./AuthProvider";
 
 const AddTouristSpot = () => {
+    const {user}= useContext(AuthContext)
     const handleAddSpot= e=>{
         e.preventDefault()
         const form= e.target
@@ -98,13 +100,13 @@ const AddTouristSpot = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" name='email' placeholder="" className="input input-bordered" required />
+          <input type="email" name='email' value={user.email} className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
           </label>
-          <input type="text" name='name' placeholder="" className="input input-bordered" required />
+          <input type="text" name='name' value={user.displayName} className="input input-bordered" required />
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Add</button>

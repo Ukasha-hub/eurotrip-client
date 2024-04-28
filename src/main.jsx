@@ -10,6 +10,10 @@ import SignIn from './SignIn.jsx';
 import AuthProvider from './AuthProvider.jsx';
 import Register from './Register.jsx';
 import AddTouristSpot from './AddTouristSpot.jsx';
+import AllTouristSpot from './AllTouristSpot.jsx';
+import UserTouristSpot from './UserTouristSpot.jsx';
+import UpdateTouristSpot from './UpdateTouristSpot.jsx';
+import PrivateRoute from './PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,8 +32,24 @@ const router = createBrowserRouter([
       },
       {
         path: '/addSpot',
-        element: <AddTouristSpot></AddTouristSpot>
+        element: <PrivateRoute><AddTouristSpot></AddTouristSpot></PrivateRoute>
+      },
+      {
+        path:'/allSpot',
+        element:<AllTouristSpot></AllTouristSpot>,
+        loader: ()=> fetch('http://localhost:5000/touristSpot')
+      },
+      {
+        path: '/userSpot',
+        element: <PrivateRoute><UserTouristSpot></UserTouristSpot></PrivateRoute>,
+        loader: ()=> fetch('http://localhost:5000/touristSpot')
+      },
+      {
+        path:'/updateSpot/:id',
+        element: <PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/touristSpot/${params.id}`)
       }
+
       
     ]
   },
