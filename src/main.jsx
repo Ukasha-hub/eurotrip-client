@@ -15,12 +15,19 @@ import UserTouristSpot from './UserTouristSpot.jsx';
 import UpdateTouristSpot from './UpdateTouristSpot.jsx';
 import PrivateRoute from './PrivateRoute.jsx';
 import SpotDetails from './SpotDetails.jsx';
+import Home from './Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
     children:[
+      {
+        path:"/",
+        element:<Home></Home>,
+        loader: ()=> fetch('http://localhost:5000/touristSpot')
+      },
+
       {
         path: '/signIn',
         element: <SignIn></SignIn>
