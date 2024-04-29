@@ -39,12 +39,29 @@ const AddTouristSpot = () => {
             if(data.insertedId){
               Swal.fire({
                 title: " Successful!",
-                text: "You have added a new in!",
+                text: "You have added a Tourist spot!",
                 icon: "success"
               });
+              e.target.reset();
             }
-            e.target.reset();
+            else {
+              Swal.fire({
+                  title: "Error!",
+                  text: "Failed to add tourist spot!",
+                  icon: "error"
+              });
+          }
+            
+            
         })
+        .catch(error => {
+          console.error('Error add tourist spot:', error);
+          Swal.fire({
+              title: "Error!",
+              text: "Failed to add tourist spot!",
+              icon: "error"
+          });
+      });
        
     }
     return (

@@ -12,6 +12,7 @@ import { FaEyeSlash } from "react-icons/fa";
 
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 
 
@@ -48,6 +49,11 @@ const SignIn = () => {
         .then(result=>{
             const user=result.user
             console.log(user)
+            Swal.fire({
+                title: " Successful!",
+                text: "You have logged in!",
+                icon: "success"
+              });
             
             navigate(location?.state? location.state: '/')
             
@@ -67,8 +73,13 @@ const SignIn = () => {
         signIn(email,password)
         .then(result=>{
             console.log(result.user)
+            Swal.fire({
+                title: " Successful!",
+                text: "You have logged in!",
+                icon: "success"
+              });
             
-            navigate(location?.state? location.state: '/')
+         navigate(location?.state? location.state: '/')
             
         })
         .catch(error=>{

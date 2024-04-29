@@ -14,6 +14,7 @@ import AllTouristSpot from './AllTouristSpot.jsx';
 import UserTouristSpot from './UserTouristSpot.jsx';
 import UpdateTouristSpot from './UpdateTouristSpot.jsx';
 import PrivateRoute from './PrivateRoute.jsx';
+import SpotDetails from './SpotDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
       {
         path:'/userSpot/updateSpot/:id',
         element: <PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/touristSpot/${params.id}`)
+      },
+      {
+        path:'/details/:id',
+        element:<PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
         loader: ({params})=> fetch(`http://localhost:5000/touristSpot/${params.id}`)
       }
 
