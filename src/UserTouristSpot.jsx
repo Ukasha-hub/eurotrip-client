@@ -75,8 +75,8 @@ const UserTouristSpot = () => {
                 <td>
             <div className="flex flex-col">
                 <button className="btn ">View Details</button>
-                <Link to={`updateSpot/${spot._id}`}></Link>
-                <button className="btn">Edit</button>
+                <Link to={`/userSpot/updateSpot/${spot._id}`}><button className="btn">Edit</button></Link>
+                
                 <button onClick={()=> handleDelete(spot._id)} className="btn">Delete</button>
             </div>
         </td>
