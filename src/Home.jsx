@@ -21,6 +21,10 @@ import { FaUserGroup } from "react-icons/fa6";
 import { FaPlaneCircleCheck } from "react-icons/fa6";
 import { FaCloudSun } from "react-icons/fa";
 
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import sponsor from './sponsor.json'
+import Lottie from 'lottie-react';
+
 
 
 
@@ -29,6 +33,13 @@ import { FaCloudSun } from "react-icons/fa";
 
 
 const Home = () => {
+
+  const [text] = useTypewriter({
+    words:['France', 'Italy', 'Spain', 'Greece', 'Switzerland'],
+    loop: {},
+    typeSpeed:120,
+    deleteSpeed: 80,
+  })
     
    
    const spots= useLoaderData()
@@ -90,7 +101,7 @@ const Home = () => {
              <div className='grid lg:grid-cols-3  grid-cols-1 gap-2 justify-center content-center justify-items-center p-5'>
              {
                         firstSixSpots.map(spot => (
-                            <div key={spot._id} className="card card-compact w-[400px] bg-base-100 border-2 shadow-xl">
+                            <div key={spot._id} className="card card-compact lg:w-[400px] w-[350px] bg-base-100 border-2 shadow-xl">
                                 <figure><img className='h-[300px]' src={spot.photo} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title text-3xl">{spot.spot}</h2>
@@ -124,14 +135,22 @@ const Home = () => {
 
 
              <div className='border-b-2'>
-             <h1 className=' rounded-xl p-5 mb-5 mt-5 text-4xl font-bold flex justify-center'>Lets Go to.... </h1>
+             <h1 className=' rounded-xl p-5 mb-5 mt-5 text-4xl font-bold flex justify-center' >
+              Lets Go to 
+              <span style={{fontWeight: 'bold', color:'green', marginLeft: '10px'}}>
+                {text}
+              </span>
+              <span style={{color:'red'}}>
+                <Cursor cursorStyle="|"/>
+              </span>
+              </h1>
              </div>
 
               <div className='grid lg:grid-cols-3  grid-cols-1 gap-2 justify-center content-center justify-items-center p-5'>
                 {
                     country.map(country=>
                         <div key={country._Id}>
-                              <div className="card w-96 bg-base-100 shadow-xl image-full">
+                              <div className="card lg:w-[400px] w-[350px] bg-base-100 shadow-xl image-full">
                                 <figure><img className='h-[100px]' src={country.image} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{country.name}</h2>
@@ -184,9 +203,15 @@ const Home = () => {
                 </div>
 
 
-                <div className=" mt-5 mx-10 rounded-lg text-center bg-white text-black items-center " >
-              <h1 className="text-2xl font-extrabold">Our Sponsors</h1>
-              <ul className="flex justify-center gap-10 mt-5">
+                <div className=" mt-5 mx-10 rounded-lg text-center bg-white text-black items-center pb-20" >
+                  <div className='flex flex-row justify-center'>
+                  <div className='w-[100px] ml-[10px]  '><Lottie loop={true} animationData={sponsor}/>
+                  
+                  </div>
+                  </div>
+                  
+              <h1 className="text-2xl lg:text-5xl font-extrabold mb-20">Our Sponsors</h1>
+              <ul className="flex justify-evenly gap-10 mt-5">
                 <li className='w-[200px]'><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyrlc-WJdVubK0pMdeXEjynDZym27ZIwT4NTTo3L3yHg&s" alt="" /></li>
                 <li className='w-[200px]'><img src="https://i.pinimg.com/736x/fc/04/c9/fc04c9b11b17b9a7ce2714428fce770e.jpg" alt="" /></li>
                 <li className='w-[200px]'><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvASCGDW013BP734YvdrC5IglsD0AdYu9q8WECi108&s" alt="" /></li>

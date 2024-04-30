@@ -22,7 +22,7 @@ const SpotDetails = () => {
                     </div>
                     
                     <p className="border-y-2 py-2 font-light"><span className="font-bold">Description: </span>{spot.description}</p>
-                    <p className="pt-2 "><span className=" text-black font-bold "><ImPriceTag />Average Cost:</span> {spot.cost}</p>
+                    <p className="pt-2 "><span className="  font-bold "><ImPriceTag />Average Cost: </span> {spot.cost}</p>
                     
                     <p className="font-bold"><FaUserGroup />Total visitors/year: <span className="font-normal">{spot.visitor}</span></p>
                     <p className="font-bold"><FaPlaneCircleCheck />Travel Time: <span className="font-normal">{spot.time}</span></p>

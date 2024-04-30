@@ -24,7 +24,7 @@ const Navbar = () => {
 
 
             <div className=" ">
-                <a className="btn btn-ghost font-extrabold text-2xl">Cascade</a>
+                <a className="btn btn-ghost font-extrabold text-2xl">EuroTrip</a>
             </div>
 
 
