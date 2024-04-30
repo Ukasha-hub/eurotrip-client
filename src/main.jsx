@@ -16,6 +16,7 @@ import UpdateTouristSpot from './UpdateTouristSpot.jsx';
 import PrivateRoute from './PrivateRoute.jsx';
 import SpotDetails from './SpotDetails.jsx';
 import Home from './Home.jsx';
+import CountryWiseSpots from './CountryWiseSpots.jsx';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,11 @@ const router = createBrowserRouter([
         path:'/details/:id',
         element:<PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
         loader: ({params})=> fetch(`http://localhost:5000/touristSpot/${params.id}`)
+      },
+      {
+        path: '/countries/:id',
+        element:<CountryWiseSpots></CountryWiseSpots>,
+        loader: ({params})=> fetch(`http://localhost:5000/countries/${params.id}`)
       }
 
       

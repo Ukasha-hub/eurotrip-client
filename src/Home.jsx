@@ -28,7 +28,7 @@ const Home = () => {
    
    const spots= useLoaderData()
    const [firstSixSpots, setFirstSixSpots] = useState(spots.slice(0, 6));
-   console.log(setFirstSixSpots)
+   //console.log(setFirstSixSpots)
 
 
    const [country, setCountry]= useState([]);
@@ -36,10 +36,12 @@ const Home = () => {
     
 
     useEffect(()=> {
-        fetch("residence.json")
+        fetch("http://localhost:5000/countries")
         .then(res => res.json())
         .then(data=> setCountry(data))
     }, [])
+
+    //console.log(country)
    
    
 
@@ -103,7 +105,25 @@ const Home = () => {
              <h1 className=' rounded-xl p-5 mb-5 mt-5 text-4xl font-bold flex justify-center'>Lets Go to.... </h1>
              </div>
 
-
+              <div className='grid grid-cols-3'>
+                {
+                    country.map(country=>
+                        <div key={country._Id}>
+                              <div className="card w-96 bg-base-100 shadow-xl image-full">
+                                <figure><img src={country.image} alt="Shoes" /></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title">{country.name}</h2>
+                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                    <div className="card-actions justify-end">
+                                    <Link to={`/countries/${country._id}`}><button className="btn btn-primary">See tourist spots</button></Link>
+                                    
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                        )
+                }
+              </div>
              
 
             
