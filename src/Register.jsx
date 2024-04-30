@@ -9,6 +9,7 @@ import { updateProfile } from "firebase/auth";
 
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 
 
@@ -55,6 +56,12 @@ const Register = () => {
                     window.location.reload();
                 })
                 .catch()
+
+                Swal.fire({
+                    title: " Successful!",
+                    text: "You have logged in!",
+                    icon: "success"
+                  });
                 
                 navigate(location?.state? location.state: '/')
              })

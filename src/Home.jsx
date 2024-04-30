@@ -77,28 +77,30 @@ const Home = () => {
                     }}
                     navigation={true}
                     modules={[Autoplay, Pagination, Navigation]}
-                    className="mySwiper lg:h-[700px]"
+                    className="mySwiper lg:h-[500px]"
                 >
                     <SwiperSlide >
                       
-                        <img className='w-full h-30 ' src="https://as2.ftcdn.net/v2/jpg/02/68/79/39/1000_F_268793912_Nh8Ukq7WrDPWJ2RuRKyiM0ITG75yPeHc.jpg" alt="" />
+                        <img className='w-full h-30 ' src="https://single-market-economy.ec.europa.eu/sites/default/files/styles/oe_theme_medium_no_crop/public/2023-05/European%20Tourism%20Day_Visual%20%2B%20layout%20examples_3%20-%20WEB%20BANNER-1920x538px.png?itok=xjnIatEt" alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
 
-                        <img className='w-full h-30 '  src="https://cdn3.vectorstock.com/i/1000x1000/97/27/travel-to-europe-time-banner-vector-23719727.jpg" alt="" /></SwiperSlide>
+                        <img className='w-full h-30 '  src="https://as2.ftcdn.net/v2/jpg/02/19/28/61/1000_F_219286149_ZXJT7PCzoDlOOcnX3bVbuYC64WEXBf2b.jpg" alt="" /></SwiperSlide>
                     <SwiperSlide>
 
-                        <img className='w-full h-30 ' src="https://previews.123rf.com/images/mikalaimanyshau/mikalaimanyshau1703/mikalaimanyshau170300137/74105878-travel-to-europe-road-trip-tourism-open-book-with-landmarks-europe-travel-guide-advertising-web.jpg" alt="" /></SwiperSlide>
+                        <img className='w-full h-30 ' src="https://thewandersiblings.files.wordpress.com/2016/04/europe_2.gif?w=695" alt="" /></SwiperSlide>
                     
                     
                 </Swiper>
             </>
              
              <div className='border-b-2'>
-             <h1 className=' rounded-xl p-5 mb-5 mt-5 text-4xl font-bold flex justify-start'>Your Next Tour </h1>
+             <h1 className=' rounded-xl p-5 mb-5 mt-5 text-4xl font-bold flex justify-center'>Your Next Tour </h1>
              </div>
 
-             <div className='grid lg:grid-cols-3  grid-cols-1 gap-2 justify-center content-center justify-items-center p-5'>
+             <div className='flex justify-end p-5'><Link to={'/allSpot'}><button className='btn btn-lg'> See All Tourist Spots</button></Link></div>
+
+             <div className='grid lg:grid-cols-3  grid-cols-1 gap-10 justify-center content-center justify-items-center p-5'>
              {
                         firstSixSpots.map(spot => (
                             <div key={spot._id} className="card card-compact lg:w-[400px] w-[350px] bg-base-100 border-2 shadow-xl">
@@ -146,7 +148,7 @@ const Home = () => {
               </h1>
              </div>
 
-              <div className='grid lg:grid-cols-3  grid-cols-1 gap-2 justify-center content-center justify-items-center p-5'>
+              <div className='grid lg:grid-cols-3  grid-cols-1 gap-10 justify-center content-center justify-items-center p-5'>
                 {
                     country.map(country=>
                         <div key={country._Id}>

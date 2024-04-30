@@ -20,8 +20,10 @@ const SpotDetails = () => {
                    
                     <p className="font-semibold text-2xl text-center text-gray-500"> {spot.location}, {spot.country}</p>
                     </div>
+                    <div className=" lg:w-[600px]">
+                    <p className="border-y-2 py-2 font-light "><span className="font-bold">Description: </span>{spot.description}</p>
+                    </div>
                     
-                    <p className="border-y-2 py-2 font-light"><span className="font-bold">Description: </span>{spot.description}</p>
                     <p className="pt-2 "><span className="  font-bold "><ImPriceTag />Average Cost: </span> {spot.cost}</p>
                     
                     <p className="font-bold"><FaUserGroup />Total visitors/year: <span className="font-normal">{spot.visitor}</span></p>

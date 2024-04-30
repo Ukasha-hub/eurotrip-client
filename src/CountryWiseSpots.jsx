@@ -28,7 +28,7 @@ const CountryWiseSpots = () => {
                         
                         <h1 className="text-5xl">{country.name}</h1>
                     </div>
-            <div className="grid lg:grid-cols-3 grid-cols-1 justify-center gap-2  p-5">
+            <div className="grid  grid-cols-1 justify-center content-center justify-items-center gap-7 text-black p-5">
             {
                 spots.map(spot=>
                     <>
@@ -42,7 +42,7 @@ const CountryWiseSpots = () => {
                     {
                         
                            
-                        <div key={spot._id} className="card card-compact w-[400px] bg-base-100 border-2 shadow-xl">
+                        <div key={spot._id} className="card card-compact w-96 lg:w-[800px] bg-gray-300 border-2 shadow-xl">
                         <figure><img className='h-[300px]' src={spot.photo} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title text-3xl">{spot.spot}</h2>
@@ -64,7 +64,7 @@ const CountryWiseSpots = () => {
                             <p>Seasonality: {spot.seasonality}</p>
                             </div>
                             </div>
-                            <div className="card-actions justify-end">
+                            <div className="card-actions justify-center">
                                 
                                 <Link to={`/details/${spot._id}`}><button className="btn btn-primary">Details</button></Link>
                             </div>
