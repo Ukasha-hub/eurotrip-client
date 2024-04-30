@@ -100,10 +100,10 @@ const Home = () => {
 
              <div className='flex justify-end p-5'><Link to={'/allSpot'}><button className='btn btn-lg'> See All Tourist Spots</button></Link></div>
 
-             <div className='grid lg:grid-cols-3  grid-cols-1 gap-10 justify-center content-center justify-items-center p-5'>
+             <div className='grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-10 justify-center content-center justify-items-center p-5'>
              {
                         firstSixSpots.map(spot => (
-                            <div key={spot._id} className="card card-compact lg:w-[400px] w-[350px] bg-base-100 border-2 shadow-xl">
+                            <div key={spot._id} className="card card-compact lg:w-[30vw] w-[350px] bg-base-100 border-2 shadow-xl">
                                 <figure><img className='h-[300px]' src={spot.photo} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title text-3xl">{spot.spot}</h2>
@@ -148,11 +148,11 @@ const Home = () => {
               </h1>
              </div>
 
-              <div className='grid lg:grid-cols-3  grid-cols-1 gap-10 justify-center content-center justify-items-center p-5'>
+              <div className='grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-10 justify-center content-center justify-items-center p-5'>
                 {
                     country.map(country=>
                         <div key={country._Id}>
-                              <div className="card lg:w-[400px] w-[350px] bg-base-100 shadow-xl image-full">
+                              <div className="card lg:w-[30vw] w-[350px] bg-base-100 shadow-xl image-full">
                                 <figure><img className='h-[100px]' src={country.image} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title">{country.name}</h2>

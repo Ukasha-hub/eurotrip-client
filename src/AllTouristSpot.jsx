@@ -43,10 +43,10 @@ const AllTouristSpot = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="grid lg:grid-cols-3  grid-cols-1 gap-2 justify-center content-center justify-items-center p-5">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2  grid-cols-1 gap-2 justify-center content-center justify-items-center p-5">
                     {
                         order.map(spot => (
-                            <div key={spot._id} className="card card-compact w-[400px] bg-base-100 border-2 shadow-xl">
+                            <div key={spot._id} className="card card-compact w-[30vw] bg-base-100 border-2 shadow-xl">
                                 <figure><img className='h-[300px]' src={spot.photo} alt="Shoes" /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title text-3xl">{spot.spot}</h2>

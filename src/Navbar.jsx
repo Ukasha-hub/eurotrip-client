@@ -65,9 +65,9 @@ const Navbar = () => {
                     <button onClick={handleSignOut} className="btn">Sign Out</button>
                     :
                     <div className="flex flex-row space-x-3">
-                        <button className="btn btn-md">
+                        <button className="btn lg:btn-md btn-sm">
                         <Link to='/signIn'>Sign In</Link></button>
-                        <button className="btn btn-md">
+                        <button className="btn lg:btn-md btn-sm">
                         <Link to='/register'>Register</Link></button>
                     </div>
                 }
