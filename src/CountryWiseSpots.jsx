@@ -45,7 +45,7 @@ const CountryWiseSpots = () => {
                         <div key={spot._id} className="card card-compact w-96 lg:w-[800px] bg-gray-300 border-2 shadow-xl">
                         <figure><img className='h-[300px]' src={spot.photo} alt="Shoes" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title text-3xl">{spot.spot}</h2>
+                            <h2 className="card-title flex justify-center text-3xl">{spot.spot}</h2>
                             <div className="border-2 rounded-xl flex flex-col justify-center content-center justify-items-center items-center gap-3 p-3 text-lg">
                             <div className="flex flex-row">
                             <ImPriceTag />

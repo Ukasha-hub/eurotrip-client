@@ -77,7 +77,7 @@ const Home = () => {
                     }}
                     navigation={true}
                     modules={[Autoplay, Pagination, Navigation]}
-                    className="mySwiper lg:h-[500px]"
+                    className="mySwiper lg:h-[400px]"
                 >
                     <SwiperSlide >
                       
