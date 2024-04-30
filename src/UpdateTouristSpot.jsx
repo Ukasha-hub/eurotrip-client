@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
-import { useLoaderData } from "react-router-dom";
+import {  useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2'
 
 
@@ -48,6 +48,7 @@ const UpdateTouristSpot = () => {
               text: "You have updated a tourist spot!",
               icon: "success"
             });
+            
           }
           else {
             Swal.fire({
@@ -76,7 +77,7 @@ const UpdateTouristSpot = () => {
           <h1 className="text-5xl font-bold">Update of {spot.spot}</h1>
           
         </div>
-        <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+        <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-slate-700/50">
           <form onSubmit={(e)=>handleUpdateSpot(e, spot._id )} className="card-body">
             <div className="flex  flex-col">
               <div className="form-control">

@@ -92,7 +92,7 @@ const SignIn = () => {
     return (
         <div className="" >
              <Helmet><title>Sign In</title></Helmet>
-           <div className="flex-flex-row" style={{backgroundImage:"url('https://png.pngtree.com/background/20230616/original/pngtree-3d-rendering-of-a-residential-neighborhood-with-expansive-housing-lots-picture-image_3549715.jpg')",backgroundSize:'cover', backgroundRepeat:'no-repeat'}}>
+           <div className="flex-flex-row" >
            <div className="bg-slate-700/75 flex flex-col  gap-5 mb-5 py-10 lg:mx-[20vw]  border-y-2">
             <h1 className="flex justify-center font-bold text-5xl ">Welcome Back</h1>
              <p className="flex justify-center text text-gray-400 ">Enter to get unlimited access to data and information</p>
@@ -110,12 +110,12 @@ const SignIn = () => {
                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clipRule="evenodd" /></svg>
                  <input type={seePass?"text":"password"} required name="password" className="grow" placeholder="password" /><span onClick={()=>setSeePass(!seePass)}>{seePass?<FaEyeSlash />:<FaEye />}</span>
              </label>
-             <div className="flex justify-center"><button className="btn  mt-5 bg-gray-400 ">Login</button></div>
+             <div className="flex justify-center"><button className="btn  mt-5 text-black bg-gray-400 ">Login</button></div>
              </div>
              <div className="divider text-white">Or, Sign in with:</div>
              <div className="flex flex-col gap-2 justify-center items-center content-center">
-             <button className="btn btn-wide bg-gray-400" onClick={handleGoogleSignIn}><span><FaGoogle /></span>SignIn with Google</button>
-             <button className="btn btn-wide bg-gray-400" onClick={handleGithubSignIn}><span><FaGithub /></span>SignIn with Github</button>
+             <button className="btn btn-wide bg-gray-400 text-black" onClick={handleGoogleSignIn}><span><FaGoogle /></span>SignIn with Google</button>
+             <button className="btn btn-wide bg-gray-400 text-black" onClick={handleGithubSignIn}><span><FaGithub /></span>SignIn with Github</button>
              </div>
             </form>
 

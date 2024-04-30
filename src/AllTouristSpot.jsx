@@ -36,10 +36,10 @@ const AllTouristSpot = () => {
                 !loading?(<div>
                     <div className="flex justify-center">
                         <div className="dropdown">
-                            <div tabIndex={0} role="button" className="btn m-1">Sort By</div>
+                            <div tabIndex={0} role="button" className="btn m-1">Average Cost Sort</div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                <li onClick={() => handleSort("Ascending")}><a>Ascending Order</a></li>
-                                <li onClick={() => handleSort("Descending")}><a>Descending Order</a></li>
+                                <li onClick={() => handleSort("Ascending")}><a>Low to High</a></li>
+                                <li onClick={() => handleSort("Descending")}><a>High to Low</a></li>
                             </ul>
                         </div>
                     </div>

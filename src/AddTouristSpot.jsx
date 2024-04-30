@@ -68,76 +68,76 @@ const AddTouristSpot = () => {
         <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col ">
     <div className="text-center ">
-      <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <h1 className="text-5xl font-bold">Add a new Tourist Spot</h1>
+     
     </div>
-    <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
-      <form onSubmit={handleAddSpot} className="card-body">
+    <div className="card shrink-0 w-full max-w-lg  shadow-2xl bg-slate-700/50">
+      <form onSubmit={handleAddSpot} className="card-body ">
         <div className="flex  flex-col">
-          <div className="form-control">
+          <div className="form-control  ">
           <label className="label">
-            <span className="label-text">PhotoURL</span>
+            <span className="label-text-bold">PhotoURL</span>
           </label>
-          <input type="text" name='photo' placeholder="photo" className="input input-bordered" required />
+          <input type="text" name='photo' placeholder="" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Tourists spot name</span>
+            <span className="label-text-bold">Tourists spot name</span>
           </label>
-          <input type="text" name='spot' placeholder="spot" className="input input-bordered" required />
+          <input type="text" name='spot' placeholder="" className="input input-bordered" required />
         </div>
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Country Name</span>
+            <span className="label-text-bold">Country Name</span>
           </label>
           <input type="text" name='country' placeholder="" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Location</span>
+            <span className="label-text-bold">Location</span>
           </label>
           <input type="text" name='location' placeholder="" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Short Description</span>
+            <span className="label-text-bold">Short Description</span>
           </label>
           <textarea type="text" name='description' placeholder="" className="input input-bordered h-[200px]" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Average Cost</span>
+            <span className="label-text-bold">Average Cost</span>
           </label>
           <input type="text" name='cost' placeholder="" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Seasonality</span>
+            <span className="label-text-bold">Seasonality</span>
           </label>
           <input type="text" name='seasonality' placeholder="" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Travel Time</span>
+            <span className="label-text-bold">Travel Time</span>
           </label>
           <input type="text" name='time' placeholder="" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Total Vistors per Year</span>
+            <span className="label-text-bold">Total Vistors per Year</span>
           </label>
           <input type="text" name='visitor' placeholder="" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text-bold">Email</span>
           </label>
           <input type="email" name='email' value={user.email} className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Name</span>
+            <span className="label-text-bold">Name</span>
           </label>
           <input type="text" name='name' value={user.displayName} className="input input-bordered" required />
         </div>

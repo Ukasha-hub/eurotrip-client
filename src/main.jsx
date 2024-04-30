@@ -17,11 +17,13 @@ import PrivateRoute from './PrivateRoute.jsx';
 import SpotDetails from './SpotDetails.jsx';
 import Home from './Home.jsx';
 import CountryWiseSpots from './CountryWiseSpots.jsx';
+import ErrorPage from './ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",

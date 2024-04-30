@@ -70,9 +70,9 @@ const Register = () => {
             <Helmet><title>Register</title></Helmet>
             
 
-       <div className="flex lg:flex-row flex-col justify-center mb-5" style={{backgroundImage:"url('https://wallpapers.com/images/hd/house-background-8to2fbp6asa80nzb.jpg')",backgroundSize:'cover', backgroundRepeat:'no-repeat'}}>
+       <div className="flex lg:flex-row flex-col justify-center mb-5" >
        <div className="lg:w-[40%] w-full flex flex-col gap-5 border-2 p-7 bg-slate-300/75">
-       <h1 className="flex justify-center font-bold text-3xl ">Join our club now</h1>
+       <h1 className="flex justify-center font-bold text-3xl text-black">Join our club now</h1>
             <form onSubmit={handleRegister}>
             <div className="flex flex-col gap-5">
             <label className="input input-bordered flex items-center gap-2 ">
@@ -97,10 +97,10 @@ const Register = () => {
             </form>
 
 
-        <div className="flex justify-center"><p>Already have an account? Then <a className="text-blue-700 underline font-bold"><Link to='/signIn'>Sign In</Link></a></p></div>
+        <div className="flex justify-center text-black"><p>Already have an account? Then <a className="text-blue-700 underline font-bold"><Link to='/signIn'>Sign In</Link></a></p></div>
         
         </div>
-        <div ><img className="h-[600px]" src="https://as2.ftcdn.net/v2/jpg/02/14/07/49/1000_F_214074999_dRq7sXYpcrEnTI6S95A0xvcshifNuzzN.jpg" alt="" /></div>
+        
        </div>
         <ToastContainer />   
         </div>

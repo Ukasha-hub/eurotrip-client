@@ -1,5 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 
 import Swal from 'sweetalert2'
@@ -7,6 +7,12 @@ import Swal from 'sweetalert2'
 const UserTouristSpot = () => {
     const spots =useLoaderData();
     const {user}= useContext(AuthContext)
+
+    const [loading, setLoading]=useState(true)
+
+    useEffect(() => {
+        setLoading(false);
+    }, [spots]);
 
     const handleDelete= id=>{
       console.log(id)
@@ -35,6 +41,7 @@ const UserTouristSpot = () => {
     
                 
               });
+              
             }
           })
         }
@@ -43,17 +50,17 @@ const UserTouristSpot = () => {
     
     return (
       <div>
-         <h1>spots: {spots.length}</h1>
+         
 
-         <div className="overflow-x-auto">
-  <table className="table table-zebra">
+         <div className="">
+  <table className="table table-zebra ">
     {/* head */}
-    <thead>
+    <thead className="lg:text-2xl">
       <tr>
         
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
+        <th>Photos</th>
+        <th>Tourist Spot</th>
+        
         
         <th>
             Actions
@@ -63,6 +70,9 @@ const UserTouristSpot = () => {
     <tbody>
 
    {
+    !loading?(
+      <>
+      {
     spots.map((spot)=>(
         <>
         {
@@ -70,14 +80,17 @@ const UserTouristSpot = () => {
                 <tr>
                 
                 <td><img className="w-40" src={spot.photo} alt="" /> </td>
-                <td>{spot.spot}</td>
-                <td>Blue</td>
-                <td>
-            <div className="flex flex-col">
-                <button className="btn ">View Details</button>
-                <Link to={`/userSpot/updateSpot/${spot._id}`}><button className="btn">Edit</button></Link>
+                <td className="lg:text-lg flex flex-col">{spot.spot}, {spot.location}, {spot.country}</td>
                 
-                <button onClick={()=> handleDelete(spot._id)} className="btn">Delete</button>
+                <td>
+            <div className="flex flex-col gap-3">
+                <Link to={`/details/${spot._id}`}><button className="btn btn-sm bg-blue-600">View Details</button></Link>
+                
+                <Link to={`/userSpot/updateSpot/${spot._id}`}><button className="btn btn-sm bg-green-600">Edit</button></Link>
+
+                <Link><button onClick={()=> handleDelete(spot._id)} className="btn btn-sm bg-red-600">Delete</button></Link>
+                
+                
             </div>
         </td>
               </tr>
@@ -87,6 +100,9 @@ const UserTouristSpot = () => {
         }
         </>
     ))
+   }
+      </>
+    ):(<span className="loading loading-spinner loading-lg text-5xl text-center flex justify-center content-center items-center justify-contents-center"></span>)
    }
 
      

@@ -153,7 +153,7 @@ const Home = () => {
              </div>
 
 
-              <div className="p-4 flex justify-center   border-2 bg-white mx-10" style={{backgroundImage:"url('https://img.freepik.com/free-photo/vintage-pink-telephone-composition_23-2148913955.jpg?size=626&ext=jpg&ga=GA1.1.34264412.1714348800&semt=ais')",backgroundSize:'cover', backgroundRepeat:'no-repeat'}}>
+              <div className="p-4 flex justify-center    bg-white mx-10" style={{backgroundImage:"url('https://img.freepik.com/free-photo/vintage-pink-telephone-composition_23-2148913955.jpg?size=626&ext=jpg&ga=GA1.1.34264412.1714348800&semt=ais')",backgroundSize:'cover', backgroundRepeat:'no-repeat'}}>
                 <form action="" className="font-bold h-[100%]" >
                   <div className="flex lg:flex-row flex-col lg:gap-[5%] ">
                     <div className="lg:w-[50%]">
@@ -184,13 +184,13 @@ const Home = () => {
                 </div>
 
 
-                <div className=" rounded-lg text-center bg-gray-200 text-black items-center " >
-              <h1 className="text-xl font-extrabold">Social Media</h1>
+                <div className=" mt-5 mx-10 rounded-lg text-center bg-white text-black items-center " >
+              <h1 className="text-2xl font-extrabold">Our Sponsors</h1>
               <ul className="flex justify-center gap-10 mt-5">
-                <li><i className="fa-brands fa-twitter fa-2xl"></i></li>
-                <li><i className="fa-brands fa-facebook fa-2xl"></i></li>
-                <li><i className="fa-brands fa-instagram fa-2xl"></i></li>
-                <li><i className="fa-brands fa-github fa-2xl"></i></li>
+                <li className='w-[200px]'><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyrlc-WJdVubK0pMdeXEjynDZym27ZIwT4NTTo3L3yHg&s" alt="" /></li>
+                <li className='w-[200px]'><img src="https://i.pinimg.com/736x/fc/04/c9/fc04c9b11b17b9a7ce2714428fce770e.jpg" alt="" /></li>
+                <li className='w-[200px]'><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvASCGDW013BP734YvdrC5IglsD0AdYu9q8WECi108&s" alt="" /></li>
+               
               </ul>
             </div>
              
