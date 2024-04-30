@@ -25,7 +25,7 @@ const AddTouristSpot = () => {
         const newTouristSpot= {photo, spot, country, location, description, cost, seasonality, time, visitor, email, name}
         //send data to mongodb
 
-        fetch('http://localhost:5000/touristSpot',{
+        fetch('https://10th-project-server.vercel.app/touristSpot',{
             method: "POST",
             headers:{
                 'content-type': 'application/json'

@@ -33,7 +33,7 @@ const UpdateTouristSpot = () => {
       const UpdatedTouristSpot= {photo, spot, country, location, description, cost, seasonality, time, visitor, email, name}
       //send data to mongodb
       console.log('inside func:', id)
-      fetch(`http://localhost:5000/touristSpot/${id}`,{
+      fetch(`https://10th-project-server.vercel.app/touristSpot/${id}`,{
           method: "PUT",
           headers:{
               'content-type': 'application/json'

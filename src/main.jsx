@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader: ()=> fetch('http://localhost:5000/touristSpot')
+        loader: ()=> fetch('https://10th-project-server.vercel.app/touristSpot')
       },
 
       {
@@ -48,27 +48,27 @@ const router = createBrowserRouter([
       {
         path:'/allSpot',
         element:<AllTouristSpot></AllTouristSpot>,
-        loader: ()=> fetch('http://localhost:5000/touristSpot')
+        loader: ()=> fetch('https://10th-project-server.vercel.app/touristSpot')
       },
       {
         path: '/userSpot',
         element: <PrivateRoute><UserTouristSpot></UserTouristSpot></PrivateRoute>,
-        loader: ()=> fetch('http://localhost:5000/touristSpot')
+        loader: ()=> fetch('https://10th-project-server.vercel.app/touristSpot')
       },
       {
         path:'/userSpot/updateSpot/:id',
         element: <PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/touristSpot/${params.id}`)
+        loader: ({params})=> fetch(`https://10th-project-server.vercel.app/touristSpot/${params.id}`)
       },
       {
         path:'/details/:id',
         element:<PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/touristSpot/${params.id}`)
+        loader: ({params})=> fetch(`https://10th-project-server.vercel.app/touristSpot/${params.id}`)
       },
       {
         path: '/countries/:id',
         element:<CountryWiseSpots></CountryWiseSpots>,
-        loader: ({params})=> fetch(`http://localhost:5000/countries/${params.id}`)
+        loader: ({params})=> fetch(`https://10th-project-server.vercel.app/countries/${params.id}`)
       }
 
       
