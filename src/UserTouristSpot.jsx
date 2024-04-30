@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthProvider";
 
@@ -7,6 +7,8 @@ import Swal from 'sweetalert2'
 const UserTouristSpot = () => {
     const spots =useLoaderData();
     const {user}= useContext(AuthContext)
+
+    const navigate= useNavigate()
 
     const [loading, setLoading]=useState(true)
 
@@ -41,9 +43,24 @@ const UserTouristSpot = () => {
     
                 
               });
-              
+              navigate(`/userSpot`)
             }
+            else {
+              Swal.fire({
+                  title: "Error!",
+                  text: "Failed to delete tourist spot!",
+                  icon: "error"
+              });
+          }
           })
+          .catch(error => {
+            console.error('Error updating tourist spot:', error);
+            Swal.fire({
+                title: "Error!",
+                text: "Failed to delete tourist spot!",
+                icon: "error"
+            });
+        });
         }
       });
     }

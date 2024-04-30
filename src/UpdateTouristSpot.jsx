@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
-import {  useLoaderData } from "react-router-dom";
+import {  useLoaderData, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 
 
 const UpdateTouristSpot = () => {
     const spot= useLoaderData()
+
+    const navigate= useNavigate()
     
     const {user}= useContext(AuthContext)
 
@@ -48,7 +50,7 @@ const UpdateTouristSpot = () => {
               text: "You have updated a tourist spot!",
               icon: "success"
             });
-            
+            navigate(`/userSpot/updateSpot/${id}`)
           }
           else {
             Swal.fire({
