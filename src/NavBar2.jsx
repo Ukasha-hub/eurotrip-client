@@ -22,7 +22,7 @@ const NavBar2 = () => {
   },[theme])
 
     return (
-        <div>
+        <div className="border-2">
 
 <div className="navbar bg-base-100">
   <div className="navbar-start">
