@@ -1,6 +1,6 @@
 The website is about giving informations of tourist spots of europe, which is the requirement 1 project of Phero
 
-website link: https://project-10-e71d8.web.app/   (Refresh the website multiple times if any webpage is not appeared)
+website link: https://project-10-e71d8.web.app/   (Refresh the website multiple times if the first webpage shows not found)
 
 In this website:
 
