@@ -2,6 +2,8 @@ The website is about giving informations of tourist spots of europe, which is th
 
 website link: https://project-10-e71d8.web.app/   (Refresh the website multiple times if the first webpage shows not found)
 
+Technologies  used: React, Tailwind,  Nodejs, expressJS, mongoDB, firebase. 
+
 In this website:
 
 
